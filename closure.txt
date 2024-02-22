@@ -1,0 +1,2 @@
+a nested function can inherit the arguments and variables of its containg function.
+in other words, the inner function contains the scope of the outer function.

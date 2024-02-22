@@ -1,0 +1,7 @@
+Deep copy: 
+a deep copy means that all of the values of the new variable 
+are copied and disconneted from the original variable.
+
+Shallow copy: 
+a shallow copy means that certain (sub-)values are still 
+connected to the original variable
