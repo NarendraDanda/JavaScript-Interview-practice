@@ -18,5 +18,3 @@ return name;
 }
 }  ); 
 alert(greeting); 
-
-// new change
