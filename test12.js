@@ -12,8 +12,8 @@ function add(x){
 // const output = add(10)
 // console.log(output(20));
 
-const output = add(10)(20);
-console.log(output);
+// const output = add(10)(20);
+// console.log(output);
 
 //important ****
 

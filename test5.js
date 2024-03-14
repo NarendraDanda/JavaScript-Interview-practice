@@ -3,7 +3,7 @@
 
 {
     // tz starts 
-    //func() -- output is :cannot access 'func' before intialization as for const arrow function not hoisted
+   // func() // -- output is :cannot access 'func' before intialization as for const arrow function not hoisted
     const func = () => console.log(x);
     let x = 3;// tz ends 
     func();

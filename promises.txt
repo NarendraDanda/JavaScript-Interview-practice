@@ -1,0 +1,6 @@
+A Promise is an object representing the eventual completion or 
+failure of an asynchronous operation.
+
+    * pending: intial state, neither fulfilled nor rejected.
+    * fulfilled: operation completed successfully.
+    * rejected: the operation failed.

@@ -1,6 +1,6 @@
 var rate = 1;
 function getRate(){
-    //var rate = 5;
+   // var rate = 5;
     if(rate === undefined){
         var rate = 6;
         return rate;

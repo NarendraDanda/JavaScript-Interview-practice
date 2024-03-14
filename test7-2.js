@@ -18,6 +18,6 @@ function question2(){
     console.log(user2);
     console.log(user1);
 }
-
+question2();
 //JSON.stringify : converts object to string
 //JSON.parse: converts string to object

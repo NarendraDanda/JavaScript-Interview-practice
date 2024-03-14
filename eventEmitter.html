@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Event Emitter</title>
+  </head>
+  <body>
+    <script>
+      class EventEmitter {
+        constructor() {
+          this.listeners = {};
+        }
+
+        on(topic, listener) {
+          if (!this.listeners[topic]) {
+            this.listeners[topic] = [];
+          }
+          this.listeners[topic].push(listener);
+        }
+
+        once(topic, listener) {
+          const onceWrapper = (data) => {
+            listener(data);
+            this.off(topic, onceWrapper);
+          };
+          this.on(topic, onceWrapper);
+        }
+
+        off(topic, listener) {
+          if (this.listeners[topic]) {
+            this.listeners[topic] = this.listeners[topic].filter(
+              (l) => l !== listener
+            );
+          }
+        }
+
+        emit(topic, data) {
+          if (this.listeners[topic]) {
+            this.listeners[topic].forEach((listener) => listener(data));
+          }
+        }
+      }
+
+      // Initialize eventEmitter
+      var eventEmitter = new EventEmitter();
+
+      function responseToEvent(msg) {
+        console.log(msg);
+      }
+
+      eventEmitter.on("pramp", responseToEvent);
+      eventEmitter.once("pramp", function (msg) {
+        console.log(msg + " just once!");
+      });
+      eventEmitter.emit("pramp", "1st");
+      eventEmitter.emit("pramp", "2nd");
+      eventEmitter.off("pramp", responseToEvent);
+      eventEmitter.emit("pramp", "3rd");
+      eventEmitter.emit("pramp", "1st");
+    </script>
+  </body>
+</html>

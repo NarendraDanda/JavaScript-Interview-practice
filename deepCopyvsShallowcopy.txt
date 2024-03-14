@@ -4,4 +4,4 @@ are copied and disconneted from the original variable.
 
 Shallow copy: 
 a shallow copy means that certain (sub-)values are still 
-connected to the original variable
+connected to the original variable.
