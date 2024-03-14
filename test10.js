@@ -19,4 +19,3 @@ const output = test();
 
 // console.log(output());
 // console.log(output());
-// console.log(output());
